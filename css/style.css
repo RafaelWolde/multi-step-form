@@ -137,6 +137,14 @@ form .input_field_container > * {
   border-radius: 4px;
 }
 
+.input_field_container > input:focus {
+  border-color: var(--secondary-background-color);
+}
+
+.input_field_container > input:required {
+  border-color: red;
+}
+
 .selection-list, .selections-list {
   display: flex;
   flex-direction: column;
@@ -147,11 +155,15 @@ form .input_field_container > * {
   display: flex;
   width: 100%;
   border-radius: 10px;
-  border: 2px solid var(--primary-background-color);
+  border: 1px solid var(--primary-background-color);
   padding: 1rem;
   box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
+}
+
+.selection-item:hover, .selections-item:hover {
+  border: 1px solid var(--primary-button-bg-color);
 }
 
 .selection-item.selected {
@@ -252,6 +264,12 @@ div.summary div .storage div {
 div.summary div .plan {
   flex-direction: column;
 }
+div.summary div #change {
+  color: var(--light-font-color);
+}
+div.summary div #change:hover {
+  color: blue;
+}
 div.summary .extras {
   flex-direction: column;
 }
@@ -316,9 +334,18 @@ footer {
   content: "Confirm";
 }
 
+.confirm_state:hover {
+  opacity: 80%;
+}
+
 .go_back_button {
   visibility: hidden;
   color: var(--light-font-color);
+}
+
+.go_back_button:hover {
+  visibility: hidden;
+  color: var(--primary-button-bg-color);
 }
 
 .go_back_button.shown {

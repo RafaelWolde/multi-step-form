@@ -130,6 +130,13 @@ form .input_field_container>* {
     border: 1px solid var(--light-font-color);
     border-radius: 4px;
 }
+.input_field_container>input:focus {
+    border-color: var(--secondary-background-color);
+}
+.input_field_container>input:required {
+    border-color: red;
+}
+
 
 section#plan {}
 
@@ -143,11 +150,14 @@ section#plan {}
     display: flex;
     width: 100%;
     border-radius: 10px;
-    border: 2px solid var(--primary-background-color);
+    border: 1px solid var(--primary-background-color);
     padding: 1rem;
     box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
+}
+.selection-item:hover, .selections-item:hover{
+    border: 1px solid var(--primary-button-bg-color);
 }
 
 .selection-item.selected {
@@ -245,13 +255,18 @@ div.summary {
         .plan {
             flex-direction: column;
         }
+        #change{
+            color: var(--light-font-color);
+        }
+        #change:hover{
+            color: blue;
+        }
     }
 
     .extras {
         flex-direction: column;
     }
 }
-
 hr#separator {
     height: 1px;
     width: 100%;
@@ -309,10 +324,18 @@ footer {
     background-color: var(--secondary-background-color);
     content: 'Confirm';
 }
+.confirm_state:hover{
+    opacity: 80%;
+}
 
 .go_back_button {
     visibility: hidden;
     color: var(--light-font-color);
+}
+.go_back_button:hover {
+    visibility: hidden;
+    color: var(--primary-button-bg-color);
+
 }
 .go_back_button.shown{
     visibility: visible;
